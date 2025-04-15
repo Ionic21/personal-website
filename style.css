@@ -424,7 +424,7 @@ main {
 
 #analyzerBtn {
   position: fixed;
-  bottom: 20px;
+  bottom: 80px;
   right: 20px;
   z-index: 9999; /* Make sure it's above everything */
   background-color: #1b263b;
@@ -439,6 +439,10 @@ main {
 
 #analyzerBtn:hover {
   background-color: #274060;
+}
+
+#analyzerBtn:active {
+  transform: scale(0.9);
 }
 
 .modal {
