@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayush Daga - Skills</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome CDN for social media icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <main>
+        <!-- Header Section -->
+        <header>
+          <div class="container header-content">
+            <img
+              src="images/profile.png"
+              alt="Ayush Daga"
+              class="profile-img"
+            />
+            <div class="header-text">
+              <h1>Ayush Daga</h1>
+              <p>Computer Science Engineering</p>
+            </div>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="index.html">About Me</a></li>
+              <li><a href="education.html">Education</a></li>
+              <li><a href="skills.html">Skills</a></li>
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+          <div class="skills-container-wrapper">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-container">
+              <div class="skill-card">
+                <div class="card-body">
+                  <h5 class="card-title">Programming</h5>
+                  <p class="card-text">
+                    Proficient in C, C++, and Python. Completed coursework in Computer Programming and Data Structures & Algorithms.
+                  </p>
+                </div>
+              </div>
+
+              <div class="skill-card">
+                <div class="card-body">
+                  <h5 class="card-title">Computer Architecture</h5>
+                  <p class="card-text">
+                    Intermediate understanding of hardware and processor internals. Studied Digital Systems, Microcontrollers, and Computer Systems Organization.
+                  </p>
+                </div>
+              </div>
+
+              <div class="skill-card">
+                <div class="card-body">
+                  <h5 class="card-title">Mathematics</h5>
+                  <p class="card-text">
+                    Comfortable with Discrete Mathematics, Real Analysis and Linear Algebra — logic, proofs, sets, relations, and combinatorics.
+                  </p>
+                </div>
+              </div>
+
+              <div class="skill-card">
+                <div class="card-body">
+                  <h5 class="card-title">IoT & Embedded Systems</h5>
+                  <p class="card-text">
+                    Hands-on experience with ESP32 microcontrollers. Built multiple IoT projects — latest one: Smart Irrigation System using LoRa communication.
+                  </p>
+                </div>
+              </div>
+
+              <div class="skill-card">
+                <div class="card-body">
+                  <h5 class="card-title">Full-Stack Tech Exposure</h5>
+                  <p class="card-text">
+                    Completed a course covering shell scripting, SQL (MySQL), NoSQL (MongoDB), HTML, CSS, JavaScript, and Python.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="container resume-download">
+          <h2>Download My Resume</h2>
+          <div class="center-button">
+            <a href="Ayush_Daga_Resume.pdf" download class="nav-button">Download My Resume</a>
+          </div>
+        </section> 
+      </main>
+
+      <!-- Footer Section -->
+      <footer>
+        <div class="container footer-container">
+          <div class="social-links">
+            <a
+              href="https://github.com/Ionic21"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ayush-daga-559096321/"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+          <p>&copy; 2025 Ayush Daga. All rights reserved.</p>
+        </div>
+      </footer>
+
+      <script src="script.js"></script>
+    </div>
+  <!-- Floating Button -->
+  <button id="analyzerBtn" title="Analyze Text">📝</button>
+
+  <!-- Modal -->
+  <div id="analyzerModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Text Analyzer</h2>
+      <textarea id="inputText" placeholder="Paste your text here..."></textarea>
+      <button class="btn-analyze" onclick="analyzeText()">Analyze</button>
+      <div class="output" id="results"></div>
+    </div>
+  </div>
+  </body>
+</html>

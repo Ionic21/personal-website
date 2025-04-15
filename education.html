@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayush Daga - Education</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome CDN for social media icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="page-wrapper">
+    <main>
+    <!-- Header Section -->
+    <header>
+      <div class="container header-content">
+        <img
+          src="images/profile.png"
+          alt="Ayush Daga"
+          class="profile-img"
+        />
+        <div class="header-text">
+          <h1>Ayush Daga</h1>
+          <p>Computer Science Engineering</p>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">About Me</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="skills.html">Skills</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Internships Section -->
+    <section id="education">
+      <div class="container">
+        <h2>Education</h2>
+        <div class="educations">
+          <button class="accordion">
+            Computer Science Engineering student at IIIT Hyderabad
+          </button>
+          <div class="panel">
+            <p>
+                I am currently pursuing my Bachelor’s degree in Computer Science at 
+                the International Institute of Information Technology, Hyderabad (IIIT-H). 
+                As I near the completion of my first year, I’ve had the opportunity to 
+                explore the foundational pillars of computer science, including programming, 
+                data structures, algorithms, and discrete mathematics.
+            </p>
+          </div>
+        </div>
+        <div class="educations">
+          <button class="accordion">JEE Preparation @ FIITJEE</button>
+          <div class="panel">
+            <p>
+                During my 11th and 12th grades, I was enrolled in the rigorous
+                two-year classroom program at FIITJEE, one of India’s most reputed
+                coaching institutes for engineering entrance exams. The program
+                was focused on comprehensive preparation for JEE Mains and JEE Advanced.
+            </p>
+          </div>
+        </div>
+
+        <div class="educations">
+          <button class="accordion">The Leisurely Life Before</button>
+          <div class="panel">
+            <p>
+              I studied at CHIREC International School until my 10th grade. During my 
+              time at CHIREC, I was more outside the school, rather than inside since 
+              I was a national level table tennis player and most of my time was dedicated
+              towards training for the same.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container resume-download">
+      <h2>Download My Resume</h2>
+      <div class="center-button">
+        <a href="Ayush_Daga_Resume.pdf" download class="nav-button">Download My Resume</a>
+      </div>
+    </section> 
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="container footer-container">
+        <div class="social-links">
+          <a
+            href="https://github.com/Ionic21"
+            target="_blank"
+            class="social-icon"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ayush-daga-559096321/"
+            target="_blank"
+            class="social-icon"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+        <p>&copy; 2025 Ayush Daga. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    </div>
+    <!-- Floating Button -->
+<button id="analyzerBtn" title="Analyze Text">📝</button>
+
+<!-- Modal -->
+<div id="analyzerModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Text Analyzer</h2>
+    <textarea id="inputText" placeholder="Paste your text here..."></textarea>
+    <button class="btn-analyze" onclick="analyzeText()">Analyze Text</button>
+    <div class="output" id="results"></div>
+  </div>
+</div>
+  
+  </body>
+</html>

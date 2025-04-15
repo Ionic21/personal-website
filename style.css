@@ -1,0 +1,503 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #e0e1dd;
+  color: #1b263b;
+}
+
+/* Header Section */
+header {
+  background-color: #415a77;
+  color: #e0e1dd;
+  padding: 20px 0;
+  text-align: left;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-img {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+}
+
+.header-text h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.header-text p {
+  font-size: 1.1em;
+  margin-top: 5px;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #e0e1dd;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+  background-color: #1b263b; /* Button background color */
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Button shadow */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #274060; /* Slightly lighter color for hover effect */
+  color: #e0e1dd;
+  transform: scale(1.05); /* Small scaling effect on hover */
+}
+
+/* Container for all sections to maintain consistent width */
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Section Headers */
+section h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #1b263b;
+}
+
+/* About Me Section */
+#about .profile p {
+  font-size: 1.1em;
+  line-height: 1.8; /* Increased line spacing */
+  margin-bottom: 15px; /* Added space between paragraphs */
+  text-align: justify;
+}
+
+/* Hyderabad Places Flip Cards */
+.places-container {
+  margin-top: 40px;
+}
+
+.places-container h3 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 25px;
+  color: #415a77;
+}
+
+.flip-cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.flip-card {
+  width: 220px;
+  height: 300px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.flip-card-front {
+  background-color: #bfc1bd;
+  color: #1b263b;
+  display: flex;
+  flex-direction: column;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.flip-card-front h4 {
+  padding: 10px;
+  background-color: #bfc1bd;
+  margin: 0;
+}
+
+.flip-card-back {
+  background-color: #415a77;
+  color: #e0e1dd;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.flip-card-back h4 {
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+.flip-card-back p {
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.places-hint {
+  text-align: center;
+  font-style: italic;
+  color: #778da9;
+  margin-top: 10px;
+}
+
+/* Internships Section */
+#education {
+  background-color: #e0e1dd;
+  /* padding: 40px 0; */
+}
+
+.educations {
+  background-color: #e0e1dd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+/* Accordion Styling */
+.accordion {
+  background-color: #415a77;
+  color: #e0e1dd;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border-radius: 10px 10px 0 0;
+}
+
+.accordion:hover {
+  background-color: #778da9;
+}
+
+.panel {
+  padding: 0 15px;
+  background-color: #bfc1bd;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+}
+
+.panel p {
+  font-size: 1em;
+  color: #1b263b;
+  line-height: 1.8;
+}
+
+.skills-section {
+  padding: 20px 0;
+  /* background-color: #f9f9f9; */
+}
+
+.skills-container-wrapper {
+  width: 80%; /* 90% width */
+  max-width: 1200px; /* Maximum width */
+  margin: 0 auto; /* Centers the container */
+  color: #1b263b;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px;
+  justify-items: stretch; /* Stretch items to the full width of their grid cell */
+}
+
+.skill-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #bfc1bd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  height: 220px; /* Reduced height from 380px to 220px */
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  min-width: 260px;
+}
+
+.skill-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Changed from space-between to flex-start */
+  height: 100%;
+}
+
+.skill-card .card-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px; /* Space between title and description */
+  font-weight: 600;
+  color: #1b263b;
+}
+
+.skill-card .card-text {
+  flex-grow: 1; /* Allows the text area to take up remaining space */
+  margin-bottom: 10px; /* Reduced margin-bottom from 20px to 10px */
+  font-size: 1.1em; /* Slightly reduced font size */
+}
+
+/* Section title */
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  /* color: #0D1B2A; */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .header-text h1 {
+    font-size: 1.8em;
+  }
+
+  .header-text p {
+    font-size: 1em;
+  }
+
+  .header-content {
+    flex-direction: column;
+  }
+  
+  .flip-cards-container {
+    gap: 20px;
+  }
+  
+  .flip-card {
+    width: 200px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-container {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+  }
+  
+  .skill-card {
+    height: auto; /* Allow height to adjust to content on mobile */
+    min-height: 180px; /* Set a minimum height */
+  }
+  
+  .flip-cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .flip-card {
+    width: 240px;
+    height: 320px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Footer Section */
+footer {
+  background-color: #415a77;
+  color: #fff;
+  /* padding: 10px 0; */
+  text-align: center;
+  position: relative;
+}
+
+footer p {
+  font-size: 1em;
+}
+
+.footer-container {
+  padding: 0;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-icon {
+  font-size: 1.5em;
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #0077b5;
+}
+
+html, body {
+  height: 100%;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.nav-button {
+  color: #e0e1dd;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+  background-color: #1b263b;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #274060;
+  color: #e0e1dd;
+  transform: scale(1.05);
+}
+
+
+.center-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+
+#analyzerBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999; /* Make sure it's above everything */
+  background-color: #1b263b;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 15px 18px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#analyzerBtn:hover {
+  background-color: #274060;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 700px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.modal-content textarea {
+  width: 100%;
+  height: 200px;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.output {
+  margin-top: 20px;
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.btn-analyze {
+  background-color: #1b263b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-analyze:hover {
+  background-color: #274060;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: black;
+}
+
